@@ -13,7 +13,7 @@
   <meta name="twitter:description" content="Fire. Flour. Napoli. Order online or reserve your table." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="modern.css" />
 </head>
@@ -25,18 +25,24 @@
   </header>
   <main id="top">
     <section class="hero">
-      <div class="hero-shade"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-copy">
-        <p class="eyebrow">Fire · Flour · Napoli</p>
-        <h1>72 HOURS IN THE MAKING.<br><em>90 SECONDS IN THE FIRE.</em></h1>
-        <p>Our dough ferments for 72 hours before meeting a blazing hot oven, San Marzano tomatoes and carefully selected ingredients.</p>
-        <div class="actions"><a class="button button-red" href="#menu">Order a pizza</a><a class="button button-ghost" href="#reservations">Book a table</a></div>
-        <small><i></i> Open today · 11:30 AM – 11:00 PM</small>
+        <p class="eyebrow"><span>MIAMI / FL</span><span>EST. 2026</span></p>
+        <h1><span>72H</span><small>TO MAKE.</small><em>90 SEC</em><small>TO BREAK.</small></h1>
+        <p class="hero-lede">Three days of patience. Ninety seconds of fire. Zero shortcuts.</p>
+        <div class="actions"><a class="button button-red" href="#menu">Order the good stuff <b>↗</b></a><a class="text-link" href="#reservations">Book a table <b>→</b></a></div>
       </div>
-      <div class="hero-number" aria-hidden="true">72</div>
+      <div class="hero-visual">
+        <div class="pizza-window"><img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=1600&q=90" alt="Neapolitan pizza fresh from the oven"></div>
+        <span class="visual-note note-one">72-hour<br>fermentation</span>
+        <span class="visual-note note-two">900°F<br>wood fire</span>
+        <span class="visual-stamp">F72<br><i>MIAMI</i></span>
+      </div>
+      <div class="hero-status"><span><i></i> OPEN TODAY</span><b>11:30 — 23:00</b><a href="#menu">SCROLL TO FEED ↓</a></div>
     </section>
+    <div class="fire-ticker" aria-hidden="true"><div>FIRE / FLOUR / NAPOLI / 72 HOURS / 90 SECONDS / NO SHORTCUTS / FIRE / FLOUR / NAPOLI / 72 HOURS / 90 SECONDS / NO SHORTCUTS /</div></div>
     <section id="menu" class="section favorites">
-      <div class="section-heading"><div><p class="eyebrow red">Forno favorites</p><h2>THE PIZZAS PEOPLE<br><em>COME BACK FOR.</em></h2></div><p>Blistered crusts, honest ingredients, and just enough fire. Every pizza starts with our 72-hour dough.</p></div>
+      <div class="section-heading"><div><p class="eyebrow red">THE HIT LIST / 01—06</p><h2>NOT YOUR<br><em>USUAL PIE.</em></h2></div><p>Blistered. Loud. Slightly chaotic. Every pizza starts with 72-hour dough and ends in a 900-degree flame.</p></div>
       <div class="pizza-grid" id="pizza-grid"></div>
       <div class="menu-more">
         <div class="menu-tabs" role="tablist" aria-label="Menu categories"><button class="active" data-category="appetizers">Appetizers</button><button data-category="salads">Salads</button><button data-category="desserts">Desserts</button><button data-category="drinks">Drinks</button></div>
