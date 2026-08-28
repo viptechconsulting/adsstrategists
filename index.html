@@ -1,18 +1,80 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ads Strategists - Expert digital advertising agency specializing in Google, YouTube, LinkedIn, Instagram and Facebook Ads campaigns. Transform your ad budget into revenue with data-driven strategies.">
-    <title>Ads Strategists | Expert Digital Advertising Agency</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forno 72 | Artisan Neapolitan Pizza in Miami</title>
+  <meta name="description" content="72-hour fermented dough, premium ingredients and fire-baked Neapolitan pizza. Order online or reserve your table at Forno 72 in Miami." />
+  <meta property="og:title" content="Forno 72 | Artisan Neapolitan Pizza in Miami" />
+  <meta property="og:description" content="72-hour fermented dough, premium ingredients and fire-baked Neapolitan pizza in Miami." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Forno 72 | Artisan Neapolitan Pizza in Miami" />
+  <meta name="twitter:description" content="Fire. Flour. Napoli. Order online or reserve your table." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Forno 72 home"><span>FORNO</span><b>72</b></a>
+    <nav id="main-nav" aria-label="Primary navigation"><a href="#menu">Menu</a><a href="#builder">Build Your Pizza</a><a href="#story">Our Story</a><a href="#reservations">Reservations</a><a href="#contact">Contact</a></nav>
+    <div class="header-actions"><button class="icon-button menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><button class="cart-trigger" aria-label="Open cart">Order <span id="cart-count">0</span></button></div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Fire · Flour · Napoli</p>
+        <h1>72 HOURS IN THE MAKING.<br><em>90 SECONDS IN THE FIRE.</em></h1>
+        <p>Our dough ferments for 72 hours before meeting a blazing hot oven, San Marzano tomatoes and carefully selected ingredients.</p>
+        <div class="actions"><a class="button button-red" href="#menu">Order a pizza</a><a class="button button-ghost" href="#reservations">Book a table</a></div>
+        <small><i></i> Open today · 11:30 AM – 11:00 PM</small>
+      </div>
+      <div class="hero-number" aria-hidden="true">72</div>
+    </section>
+    <section id="menu" class="section favorites">
+      <div class="section-heading"><div><p class="eyebrow red">Forno favorites</p><h2>THE PIZZAS PEOPLE<br><em>COME BACK FOR.</em></h2></div><p>Blistered crusts, honest ingredients, and just enough fire. Every pizza starts with our 72-hour dough.</p></div>
+      <div class="pizza-grid" id="pizza-grid"></div>
+      <div class="menu-more">
+        <div class="menu-tabs" role="tablist" aria-label="Menu categories"><button class="active" data-category="appetizers">Appetizers</button><button data-category="salads">Salads</button><button data-category="desserts">Desserts</button><button data-category="drinks">Drinks</button></div>
+        <div id="menu-list" class="menu-list"></div>
+      </div>
+    </section>
+    <section id="builder" class="builder-section section">
+      <div class="builder-intro"><p class="eyebrow">Made by you</p><h2>BUILD YOUR <em>OWN.</em></h2><p>Your pizza. Your rules. Start with the dough and make it yours.</p></div>
+      <div class="builder-layout">
+        <form id="pizza-builder" class="builder-form">
+          <div class="builder-progress" aria-label="Pizza builder progress"><span class="active">1 Size</span><span>2 Crust</span><span>3 Sauce</span><span>4 Cheese</span><span>5 Toppings</span><span>6 Review</span></div>
+          <fieldset><legend><small>01</small> Choose your size</legend><div class="choice-grid" id="size-options"></div></fieldset>
+          <fieldset><legend><small>02</small> Pick a crust</legend><div class="choice-grid" id="crust-options"></div></fieldset>
+          <fieldset><legend><small>03</small> Sauce</legend><div class="choice-grid" id="sauce-options"></div></fieldset>
+          <fieldset><legend><small>04</small> Cheese</legend><div class="choice-grid" id="cheese-options"></div></fieldset>
+          <fieldset><legend><small>05</small> Toppings</legend><div id="topping-options"></div></fieldset>
+        </form>
+        <aside class="pizza-summary"><div class="pizza-orbit"><div class="pizza-disc" aria-hidden="true"><span>72</span></div></div><p class="eyebrow red">Your pizza</p><h3 id="builder-name">Regular · Classic</h3><ul id="builder-summary"></ul><div class="summary-total"><span>Total</span><strong id="builder-price">$16.00</strong></div><button id="add-custom" class="button button-red">Add to order — $16.00</button></aside>
+      </div>
+    </section>
+    <section id="story" class="story-section">
+      <div class="story-image"><img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=1500&q=85" alt="Pizzaiolo preparing pizza by hand"><span>Three days<br>of patience.</span></div>
+      <div class="story-copy"><p class="eyebrow red">The Forno way</p><h2>WE WAIT 72 HOURS.<br><em>SO YOU DON'T HAVE TO.</em></h2><p>Great pizza starts long before it reaches the oven.</p><p>At Forno 72, every batch of dough begins three days before service. Flour, water, salt and time do most of the work.</p><p>After a 72-hour fermentation, each pizza is stretched by hand, topped with carefully selected ingredients and fired at extreme heat.</p><blockquote>No shortcuts. No frozen dough.<br>Just pizza made the way we believe it should be.</blockquote></div>
+    </section>
+    <section class="ingredients section"><div class="section-heading"><div><p class="eyebrow red">Our ingredients</p><h2>SIMPLE INGREDIENTS.<br><em>SERIOUS PIZZA.</em></h2></div><p>When every ingredient has a purpose, there is nowhere for quality to hide.</p></div><div class="ingredient-grid"><article><b>01</b><h3>72-Hour Dough</h3><p>Slow fermentation creates flavor, texture and a lighter crust.</p></article><article><b>02</b><h3>San Marzano Tomatoes</h3><p>Italian tomatoes selected for sweetness and balanced acidity.</p></article><article><b>03</b><h3>Italian Cheese</h3><p>Fresh mozzarella, Fior di Latte and Parmigiano Reggiano.</p></article><article><b>04</b><h3>High-Heat Oven</h3><p>Extreme heat creates the blistered crust that defines Neapolitan pizza.</p></article></div></section>
+    <section class="testimonials section"><p class="eyebrow">Word on the street</p><div class="quote active"><div class="stars">★★★★★</div><blockquote>“The crust alone is worth coming back for.”</blockquote><cite>— Daniel R.</cite></div><div class="quote"><div class="stars">★★★★★</div><blockquote>“Finally a place that understands what a proper Margherita should taste like.”</blockquote><cite>— Sofia M.</cite></div><div class="quote"><div class="stars">★★★★★</div><blockquote>“The spicy soppressata with hot honey is ridiculous.”</blockquote><cite>— Michael T.</cite></div><div class="quote-dots"><button class="active" aria-label="Testimonial 1"></button><button aria-label="Testimonial 2"></button><button aria-label="Testimonial 3"></button></div></section>
+    <section id="reservations" class="reservation-section section">
+      <div class="reservation-copy"><p class="eyebrow">Reservations</p><h2>YOUR TABLE<br><em>IS WAITING.</em></h2><p>Good pizza tastes better around a table.</p><div class="reservation-meta"><span>For parties of 8 or more, call us at<br><a href="tel:+13055550172">(305) 555-0172</a></span></div></div>
+      <form id="reservation-form" class="reservation-form"><div class="form-step"><span>01</span><label>Party size<select name="party" required><option value="">Select guests</option><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5 Guests</option><option>6 Guests</option><option>7+ Guests</option></select></label></div><div class="form-step"><span>02</span><label>Date<input type="date" name="date" required></label></div><div class="form-step"><span>03</span><label>Available time</label><div class="time-grid" id="time-grid"></div></div><div id="guest-details" class="guest-details"><div class="two-col"><label>First name<input name="firstName" required></label><label>Last name<input name="lastName" required></label></div><div class="two-col"><label>Email<input name="email" type="email" required></label><label>Phone<input name="phone" type="tel" required></label></div><label>Special requests<textarea name="requests" rows="3"></textarea></label><div class="special-options"><label><input type="checkbox" name="occasion" value="Birthday"> Birthday</label><label><input type="checkbox" name="occasion" value="Anniversary"> Anniversary</label><label><input type="checkbox" name="occasion" value="High Chair"> High Chair</label><label><input type="checkbox" name="occasion" value="Wheelchair Accessibility"> Accessibility</label></div><button class="button button-red" type="submit">Confirm reservation</button></div></form>
+    </section>
+    <section class="reservation-cta"><div><p class="eyebrow">Dinner plans?</p><h2>PIZZA, WINE &<br>A TABLE WAITING.</h2></div><a class="button button-cream" href="#reservations">Book your table</a></section>
+    <section id="contact" class="location section"><div><p class="eyebrow red">Miami, Florida</p><h2>FIND THE <em>FIRE.</em></h2><address><strong>Forno 72</strong><br>728 NE 2nd Avenue<br>Miami, FL 33132</address><p><a href="tel:+13055550172">(305) 555-0172</a><br><a href="mailto:ciao@forno72.com">ciao@forno72.com</a></p></div><div class="hours"><h3>Hours</h3><p><span>Monday–Thursday</span><b>11:30 AM – 10:00 PM</b></p><p><span>Friday–Saturday</span><b>11:30 AM – 11:00 PM</b></p><p><span>Sunday</span><b>12:00 PM – 10:00 PM</b></p></div><div class="map-placeholder" role="img" aria-label="Map placeholder showing Forno 72 in downtown Miami"><span>MIAMI</span><i>72</i><p>NE 2nd Ave</p></div></section>
+  </main>
+  <footer class="footer"><div class="brand"><span>FORNO</span><b>72</b></div><div><a href="#menu">Menu</a><a href="#menu">Order Online</a><a href="#reservations">Reservations</a><a href="#story">Our Story</a><a href="#contact">Contact</a></div><div><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Facebook</a></div><div><p>© 2026 Forno 72. All rights reserved.</p><a href="#">Privacy Policy</a> · <a href="#">Terms</a></div></footer>
+  <div id="cart-overlay" class="overlay" hidden></div><aside id="cart-drawer" class="cart-drawer" aria-label="Shopping cart" aria-hidden="true"><header><div><p class="eyebrow red">Forno 72</p><h2>Your order</h2></div><button class="close-cart" aria-label="Close cart">×</button></header><div id="cart-items" class="cart-items"></div><footer><div><span>Subtotal</span><b id="cart-subtotal">$0.00</b></div><div><span>Tax</span><b id="cart-tax">$0.00</b></div><div class="cart-total"><span>Total</span><b id="cart-total">$0.00</b></div><button id="checkout-button" class="button button-red">Checkout</button></footer></aside>
+  <dialog id="product-dialog" class="product-dialog"><button class="dialog-close" aria-label="Close">×</button><div id="product-detail"></div></dialog>
+  <dialog id="checkout-dialog" class="checkout-dialog"><button class="dialog-close checkout-close" aria-label="Close checkout">×</button><div id="checkout-view"><div class="checkout-main"><p class="eyebrow red">Secure checkout</p><h2>Almost oven time.</h2><div class="fulfillment-toggle"><button class="active" data-type="pickup">Pickup</button><button data-type="delivery">Delivery</button></div><form id="checkout-form"><div id="pickup-fields"><label>When<select name="pickupTime"><option>ASAP · 25–35 min</option><option>Schedule for later</option></select></label></div><div id="delivery-fields" hidden><div class="two-col"><label>Name<input name="deliveryName"></label><label>Phone<input type="tel" name="deliveryPhone"></label></div><label>Email<input type="email" name="deliveryEmail"></label><label>Street address<input name="street"></label><div class="two-col"><label>Apartment<input name="apartment"></label><label>City<input name="city" value="Miami"></label></div><div class="two-col"><label>ZIP code<input name="zip" inputmode="numeric" pattern="[0-9]{5}"></label><label>Delivery instructions<input name="instructions"></label></div></div><h3>Payment</h3><div class="payment-mock"><label>Card number<input required inputmode="numeric" placeholder="4242 4242 4242 4242" maxlength="19"></label><div class="two-col"><label>Expiration<input required placeholder="MM / YY"></label><label>CVC<input required inputmode="numeric" placeholder="123" maxlength="4"></label></div><small>Demo only — no payment will be processed.</small></div><button class="button button-red" type="submit">Place order</button></form></div><aside id="checkout-summary"></aside></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
 </html>
+
